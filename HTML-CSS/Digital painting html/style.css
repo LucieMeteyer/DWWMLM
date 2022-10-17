@@ -1,0 +1,81 @@
+@font-face {
+    font-family: "roboto bold";
+    src: url(/Static/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: roboto light;
+    src: url(/Static/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: roboto italic;
+    src: url(/Static/Roboto-Italic.ttf);
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(/Static/Roboto-Regular.ttf);
+}
+#body-main{
+    background-color: #FF8500;
+    margin-left: 243px;
+    margin-right: 243px;
+}
+
+
+body{
+    background-color :#ffffff;
+    margin: 0;
+   
+}
+
+h1{
+    color: white;
+    margin-left: 40px;
+    font-family: "roboto bold";
+    font-size: 50px;
+    margin-top: 0;
+    padding-top: 30px;
+}
+
+h2{
+    color: black;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-family: "roboto bold";
+    font-size: 20px;
+}
+
+p.petitpara{
+    margin-left: 200px;
+    margin-right: 40px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    color: black;
+    font-family: "roboto italic";
+    line-height: 25px;
+}
+
+p.para{
+    color: white;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-family: "roboto light";
+    font-size: 15px;
+    line-height: 25px;
+}
+
+p.para2{
+    margin-left: 40px;
+    color: black;
+    font-family: "roboto bold";
+}
+
+ul{
+    margin-left: 20px;
+    font-family: "roboto";
+    margin-bottom: 0;
+    line-height: 25px;
+    padding-bottom: 30px;
+}
