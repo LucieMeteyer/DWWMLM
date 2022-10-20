@@ -1,0 +1,160 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+body {
+  font-family: Raleway, sans-serif;
+  height: 100vh;
+  background: #222;
+}
+
+.info-section {
+  color: #f1f1f1;
+  text-align: center;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.section-flex {
+  padding-bottom: 400px;
+}
+
+/* Exemples flex */
+
+.container-flex  {
+  width: 800px;
+  height: 500px;
+  margin: 150px auto;
+  background: #ffcb9a;
+  display: flex;
+}
+
+.item-flex {  
+  background: crimson;
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+}
+
+
+/* Exemple #1 */
+
+.containerA{
+  display:flex;
+}
+
+.a2{
+  flex-grow: 500;
+}
+
+
+/* Exemple #2 */
+.containerB {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+.b1{
+  flex-basis: 390px;
+}
+
+.b2{
+  flex-basis: 390px;
+}
+
+.b3{
+  flex-basis: 100%;
+}
+
+.b4{
+  flex-basis: 390px;
+}
+
+.b5{
+  flex-basis: 390px;
+}
+
+/* Exemple #3 */
+
+.containerC {
+display:flex;
+flex-direction:column ;
+justify-content: center;
+
+}
+
+.c1{
+  align-self:center;
+  padding-top: 4%;
+  padding-bottom: 4% ;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.c2{
+  align-self:center;
+  padding-top: 4%;
+  padding-bottom: 4% ;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.c3{
+  align-self:center;
+  padding-top: 4%;
+  padding-bottom: 4% ;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.c4{
+  align-self:center;
+  padding-top: 4%;
+  padding-bottom: 4% ;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.c5{
+  align-self:center;
+  padding-top: 4%;
+  padding-bottom: 4% ;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.c6{
+  align-self:center;
+  padding-top: 4%;
+  padding-bottom: 4% ;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+/* Exemple #4 */
+.containerD {
+  height: 460px;
+  width: 400px;
+}
+.containerD .item-flex {
+  width: 150px;
+  height: 150px;
+}
+
+.d1{
+  align-self: flex-start;
+}
+
+.d2{
+  align-self: center;
+}
+
+.d3{
+  align-self: flex-end;
+}
