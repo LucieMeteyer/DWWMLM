@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container1 {
+  background-color: gold;
+}
+.container1 h2 {
+  font-size: 35px;
+  color: darkorchid;
+}
+.container1 p {
+  font-size: 25px;
+}
+.container1 :nth-of-type(1) {
+  color: red;
+}
+.container1 :nth-of-type(2) {
+  color: blue;
+}
+.container1 :nth-of-type(2) span {
+  color: green;
+}
+.container2 h2 {
+  font-size: 50px;
+  color: #022d02;
+}
