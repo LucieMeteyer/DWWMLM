@@ -1,20 +1,22 @@
 <?php
-$nb=readline("Combien de valeurs voulez vous mettre ?");
-$tab=[];
+$tab = [4,8,7,9,3,12];
+$comp = 0;
 
-$entree=false;
-for($i=0;$i<$nb;$i++){
-    $saisie=readline("Entrez les mots que vous voulez ");
-    $tab[$i]=$saisie;
+for($i = 0 ; $i < count($tab) ; $i++){
+    for($index = $i ; $index < count($tab)-1 ; $index++){
+        if($tab[$i] == $tab[$index+1]){
+            $comp++ ;
 
-    if($tab[$i>=2]){
-        echo "doublons";
-        $entree=true;     
-    }
+        }
+
+}
+}
+echo $comp . " " ;
+if($comp>0){
+    echo "doublon";
+}
+elseif($comp == 0){
+    echo "pas de doublon";
 }
 
-
-if($entree==false){
-    echo "pas de doublons";
-}
 ?>
