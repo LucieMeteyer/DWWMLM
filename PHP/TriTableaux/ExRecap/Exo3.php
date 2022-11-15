@@ -15,8 +15,4 @@ while ($i<=$saisie){
     echo "\n";
     $i++;
 }
-
-
- 
-
 ?>
