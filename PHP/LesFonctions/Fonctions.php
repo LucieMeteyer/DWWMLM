@@ -23,10 +23,37 @@ function PPCM ($nb1, $nb2){
 }
 
 function Multi ($nb, $i){
-    for($i=0;$i<10;$i++){
-        $nb*$i;
-        
-    }
+    
     return ($nb*$i);
+}
+
+function Facto ($nb, $i, $factorielle){
+    for ($i=2; $i<$nb ;$i++){
+        $factorielle = $factorielle * $i;
+    }
+    return ($factorielle * $i);
+}
+
+function Add ($tab){
+return(array_sum($tab));
+}
+
+function Etoiles ($i, $nb){
+    
+    while ($i<$nb){
+        for ($j=0; $j<$i; $j++){
+            echo "* ";
+        }
+        echo "\n";
+        $i++;
+    }
+    while ($i>0){
+        for ($j = 0 ; $j<$i ; $j++){
+            echo "* ";
+        }
+        echo "\n";
+        $i--;
+    }
+    return;
 }
 ?>
