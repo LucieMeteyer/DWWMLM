@@ -46,11 +46,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Difficile</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
+                        <?php for ($i = 1; $i <= 4; $i++) : ?>
+                                <a class="dropdown-item" href="../SiteExo/2-ExercicesDifficiles/Exercice<?=$i ?>.php">exercice<?=$i ?></a>
+                            <?php endfor; ?>
                         </div>
                     </li>
                     <!-- Bouton Armes -->
