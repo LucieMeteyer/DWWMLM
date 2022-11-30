@@ -1,6 +1,11 @@
 <?php ob_start() ?>
 
-
+<form action="" method="post">
+    <center>
+        <input type="text" value=Recherche: name=Recherche>
+        <input type="submit" value=Rechercher name=Rechercher>
+    </center>
+</form>
 
 <?php
 
@@ -78,12 +83,12 @@ class Livre
 
 
 
-$livre1 = new Livre(" Dragon Ball t.1 : Son Gokû et ses amis", "Glenat", "Akira Toriyama", 2010);
-$livre2 = new Livre(" Dragon Ball t.2 : Les Dragon Balls sont en danger !", "Glenat", "Akira Toriyama", 2010);
-$livre3 = new Livre(" Dragon Ball t.3 : Le début du Tenka Ichi Budôkai !!", "Glenat", "Akira Toriyama", 2010);
-$livre4 = new Livre(" My Hero Academia t.1 : Izuku Midoriya : Les Origines", "Ki-Oon", "Kohei Horikoshi", 2016);
-$livre5 = new Livre(" My Hero Academia t.2 : Déchaine toi, maudit nerd !", "Ki-Oon", "Kohei Horikoshi", 2016);
-$livre6 = new Livre(" My Hero Academia t.3 : AllMight", "Ki-Oon", "Kohei Horikoshi", 2016);
+$livre1 = new Livre(" Dragon Ball t.1 : Son Gokû et ses amis", " Glenat", " Akira Toriyama", 2010);
+$livre2 = new Livre(" Dragon Ball t.2 : Les Dragon Balls sont en danger !", " Glenat", "Akira Toriyama", 2010);
+$livre3 = new Livre(" Dragon Ball t.3 : Le début du Tenka Ichi Budôkai !!", " Glenat", " Akira Toriyama", 2010);
+$livre4 = new Livre(" My Hero Academia t.1 : Izuku Midoriya : Les Origines", " Ki-Oon", " Kohei Horikoshi", 2016);
+$livre5 = new Livre(" My Hero Academia t.2 : Déchaine toi, maudit nerd !", " Ki-Oon", " Kohei Horikoshi", 2016);
+$livre6 = new Livre(" My Hero Academia t.3 : All Might", "Ki-Oon", " Kohei Horikoshi", 2016);
 $livres = [$livre1, $livre2, $livre3, $livre4, $livre5, $livre6];
 
 
@@ -91,17 +96,16 @@ foreach ($livres as $livre) {
     echo $livre->__toString();
 }
 
-
+if (isset($_POST["Recherche"])) {
+    foreach ($livres as $livre) {
+        if (($_POST["Recherche"]) === "Dragon Ball") {
+            echo $livre1, $livre2, $livre3;
+        }
+    }
+}
 ?>
 
-<center>
-   
-</center>
 
-<?php
-
-
-?>
 <?php
 $content = ob_get_clean();
 $titre = "Exercice 7 :";
