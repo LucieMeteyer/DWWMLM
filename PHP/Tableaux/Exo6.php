@@ -2,7 +2,7 @@
 $saisie=readline("Combien de valeur voulez vous mettre ?");
 $somme=0;
 $tab=[];
-for($i=0;$i<$saisie;$i++){
+for($i=1;$i<=$saisie;$i++){
     $notes=readline("nombre ");
     $tab[$i]=$notes;
     $somme=$notes+$somme;
