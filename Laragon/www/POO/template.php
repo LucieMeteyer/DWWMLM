@@ -107,6 +107,15 @@
                             <?php endfor; ?>
                         </div>
                     </li>
+                     <!-- Bouton -->
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exo10</a>
+                        <div class="dropdown-menu">
+                        <?php for ($i = 1; $i <= 1; $i++) : ?>
+                                <a class="dropdown-item" href="../POO/Exo10.php">exercice<?=$i ?></a>
+                            <?php endfor; ?>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
