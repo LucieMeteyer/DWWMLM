@@ -92,14 +92,15 @@ class Cadre extends Employe
         }
     }
 
-    public function Manage($listeEmploye)
+    public function Manage(Employe $employe, Cadre $cadre)
     {
-       
-
+       echo "Managé par : " . $cadre->getPrenom() . " " . $cadre->getNom() . "<br>";
     }
 
     public function AugmenteUnSalarie(Employe $employe, $pourcentage){
-        $augmentation = $employe->salaire * (1+($pourcentage/100));
-        echo $augmentation;
+        $augmentation = $employe->getSalaire() * (1+($pourcentage/100));
+        echo $employe;
+        echo "Salaire après augmentation : ";
+        return $augmentation . "€";
     }
 }

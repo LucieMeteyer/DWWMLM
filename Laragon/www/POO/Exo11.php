@@ -1,8 +1,7 @@
 <?php ob_start() ?>
 
 <?php
-require "Employe.php";
-require "Cadre.php";
+
 //////////////////////PARTIE EMPLOYE//////////////////////
 $employe1 = new Employe("Neymar", "Jean", "1850389546458", 1500.56, "soudeur");
 $employe2 = new Employe("Jeremy", "Simon", "179028955812", 1700.47, "assistant mecanicien" );
@@ -38,6 +37,6 @@ echo $cadre1->Manage($employe3, $cadre1);
 
 <?php
 $content = ob_get_clean();
-$titre = "Exercice 10";
+$titre = "Exercice 11";
 require "template.php"
 ?>
