@@ -29,7 +29,7 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exo1</a>
                         <div class="dropdown-menu">
                             <?php for ($i = 1; $i <= 1; $i++) : ?>
-                                <a class="dropdown-item" href="../POO/Exo1.php">exercice<?=$i ?></a>
+                                <a class="dropdown-item" href="../POO/Exos/Exo1.php">exercice<?=$i ?></a>
                             <?php endfor; ?>
                         </div>
                     </li>
@@ -38,7 +38,7 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exo2</a>
                         <div class="dropdown-menu">
                         <?php for ($i = 1; $i <= 1; $i++) : ?>
-                                <a class="dropdown-item" href="../POO/Exo2.php">exercice<?=$i ?></a>
+                                <a class="dropdown-item" href="../POO/Exos/Exo2.php">exercice<?=$i ?></a>
                             <?php endfor; ?>
                         </div>
                     </li>
@@ -47,7 +47,7 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exo3</a>
                         <div class="dropdown-menu">
                         <?php for ($i = 1; $i <= 1; $i++) : ?>
-                                <a class="dropdown-item" href="../POO/Exo3.php">exercice<?=$i ?></a>
+                                <a class="dropdown-item" href="../POO/Exos/Exo3.php">exercice<?=$i ?></a>
                             <?php endfor; ?>
                         </div>
                     </li>
@@ -56,7 +56,7 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exo4</a>
                         <div class="dropdown-menu">
                         <?php for ($i = 1; $i <= 1; $i++) : ?>
-                                <a class="dropdown-item" href="../POO/Exo4.php">exercice<?=$i ?></a>
+                                <a class="dropdown-item" href="../POO/Exos/Exo4.php">exercice<?=$i ?></a>
                             <?php endfor; ?>
                         </div>
                     </li>
@@ -65,7 +65,7 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exo5</a>
                         <div class="dropdown-menu">
                         <?php for ($i = 1; $i <= 1; $i++) : ?>
-                                <a class="dropdown-item" href="../POO/Exo5.php">exercice<?=$i ?></a>
+                                <a class="dropdown-item" href="../POO/Exos/Exo5.php">exercice<?=$i ?></a>
                             <?php endfor; ?>
                         </div>
                     </li>
@@ -74,7 +74,7 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exo6</a>
                         <div class="dropdown-menu">
                         <?php for ($i = 1; $i <= 1; $i++) : ?>
-                                <a class="dropdown-item" href="../POO/Exo6.php">exercice<?=$i ?></a>
+                                <a class="dropdown-item" href="../POO/Exos/Exo6.php">exercice<?=$i ?></a>
                             <?php endfor; ?>
                         </div>
                     </li>
@@ -83,7 +83,7 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exo7</a>
                         <div class="dropdown-menu">
                         <?php for ($i = 1; $i <= 1; $i++) : ?>
-                                <a class="dropdown-item" href="../POO/Exo7.php">exercice<?=$i ?></a>
+                                <a class="dropdown-item" href="../POO/Exos/Exo7.php">exercice<?=$i ?></a>
                             <?php endfor; ?>
                         </div>
                     </li>
@@ -93,7 +93,7 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exo8</a>
                         <div class="dropdown-menu">
                         <?php for ($i = 1; $i <= 1; $i++) : ?>
-                                <a class="dropdown-item" href="../POO/Exo8.php">exercice<?=$i ?></a>
+                                <a class="dropdown-item" href="../POO/Exos/Exo8.php">exercice<?=$i ?></a>
                             <?php endfor; ?>
                         </div>
                     </li>
@@ -103,7 +103,7 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exo9</a>
                         <div class="dropdown-menu">
                         <?php for ($i = 1; $i <= 1; $i++) : ?>
-                                <a class="dropdown-item" href="../POO/Exo9.php">exercice<?=$i ?></a>
+                                <a class="dropdown-item" href="../POO/Exos/Exo9.php">exercice<?=$i ?></a>
                             <?php endfor; ?>
                         </div>
                     </li>
@@ -112,7 +112,7 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exo10</a>
                         <div class="dropdown-menu">
                         <?php for ($i = 1; $i <= 1; $i++) : ?>
-                                <a class="dropdown-item" href="../POO/Exo10.php">exercice<?=$i ?></a>
+                                <a class="dropdown-item" href="../POO/Exos/Exo10.php">exercice<?=$i ?></a>
                             <?php endfor; ?>
                         </div>
                     </li>
@@ -121,7 +121,25 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exo11</a>
                         <div class="dropdown-menu">
                         <?php for ($i = 1; $i <= 1; $i++) : ?>
-                                <a class="dropdown-item" href="../POO/Exo11.php">exercice<?=$i ?></a>
+                                <a class="dropdown-item" href="../POO/Exos/Exo11.php">exercice<?=$i ?></a>
+                            <?php endfor; ?>
+                        </div>
+                    </li>
+                     <!-- Bouton -->
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ExoVoiture</a>
+                        <div class="dropdown-menu">
+                        <?php for ($i = 1; $i <= 1; $i++) : ?>
+                                <a class="dropdown-item" href="/POO/PHP-CLI/Exo1.php">exercice<?=$i ?></a>
+                            <?php endfor; ?>
+                        </div>
+                    </li>
+                    <!-- Bouton -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ExoLapin</a>
+                        <div class="dropdown-menu">
+                        <?php for ($i = 1; $i <= 1; $i++) : ?>
+                                <a class="dropdown-item" href="/POO/Lapin/Exo12.php">exercice<?=$i ?></a>
                             <?php endfor; ?>
                         </div>
                     </li>
