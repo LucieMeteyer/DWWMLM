@@ -1,5 +1,6 @@
 <?php
-class Animal implements Deplacement
+require_once "Deplacement.php";
+ abstract class Animal implements Deplacement
 {
     private $couleur;
     private $nbPattes;
@@ -36,12 +37,11 @@ class Animal implements Deplacement
     }
 
     public function crier(){
-        echo " glapie ";
+        echo " Le lapin glapie de peur ";
     }
 
-    public function seDeplacer($deplacement)
+    public function seDeplacer()
     {
-        $this-> deplacement = $deplacement;
     }
 
 

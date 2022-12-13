@@ -1,13 +1,13 @@
 <?php
-class Humain implements Deplacement
+require_once "Deplacement.php";
+abstract class Humain implements Deplacement
 {
     private $nom;
-    
+
 
     protected function __construct($nom)
     {
         $this->nom = $nom;
-       
     }
 
     //getter
@@ -24,13 +24,5 @@ class Humain implements Deplacement
         $this->nom = $nom;
     }
 
-    public function seDeplacer($deplacement)
-    {
-        $this-> deplacement = $deplacement;
-    }
-
-
-
-
+    public function seDeplacer(){}
 }
-?>

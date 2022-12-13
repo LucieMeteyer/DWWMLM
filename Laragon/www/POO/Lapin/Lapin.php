@@ -1,10 +1,12 @@
 <?php
+require "Animal.php";
+
 class Lapin extends Animal
 {
     private $enVie;
     
 
-    protected function __construct($enVie,$couleur, $nbPattes)
+    public function __construct($enVie,$couleur, $nbPattes)
     {
         $this->enVie = $enVie;
         Animal::__construct($couleur, $nbPattes);
@@ -25,11 +27,11 @@ class Lapin extends Animal
     }
 
     public function fuir(){
-        echo " ";
+        echo " Le lapin blanc s’enfuie sur ses 4 pattes d’un seul bond ! ";
     }
 
     public function seNourrir(){
-        echo " ";
+        echo " Le lapin se nourri ";
     }
 
 }

@@ -5,7 +5,7 @@ class Chasseur extends Humain
     private $arme;
 
 
-    protected function __construct($arme, $nom)
+    public function __construct($arme, $nom)
     {
         $this->arme = $arme;
         Humain::__construct($nom);
@@ -28,6 +28,13 @@ class Chasseur extends Humain
 
     public function chasser()
     {
-        echo "";
+        echo $this->getNom() . " tire sur le lapin avec son fusil et ... " . "\n"; 
     }
+
+    public function seDeplacer()
+    {
+        $phrase=$this->getNom() . " avance avec son fusil" . "\n";
+        return $phrase;
+    }
+   
 }
