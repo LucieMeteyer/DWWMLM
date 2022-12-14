@@ -28,7 +28,14 @@ class Chasseur extends Humain
 
     public function chasser()
     {
-        echo $this->getNom() . " tire sur le lapin avec son fusil et ... " . "\n"; 
+        $nb = rand(1, 6);
+        if($nb == 1 or 6){
+            echo " le touche";
+        }
+        else{
+            echo " le rate";
+        }
+        return $this->getNom() . " tire sur le lapin avec son fusil et ... " . "\n"; 
     }
 
     public function seDeplacer()

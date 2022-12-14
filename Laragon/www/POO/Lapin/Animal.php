@@ -37,7 +37,7 @@ require_once "Deplacement.php";
     }
 
     public function crier(){
-        echo " Le lapin glapie de peur ";
+        echo "Le lapin glapie de peur " . "\n";
     }
 
     public function seDeplacer()

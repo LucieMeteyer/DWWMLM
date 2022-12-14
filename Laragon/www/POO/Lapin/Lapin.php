@@ -27,11 +27,11 @@ class Lapin extends Animal
     }
 
     public function fuir(){
-        echo " Le lapin blanc s’enfuie sur ses 4 pattes d’un seul bond ! ";
+       return "Le lapin blanc s’enfuie sur ses "  . $this->nbPattes . " pattes d’un seul bond ! " . "\n";
     }
 
     public function seNourrir(){
-        echo " Le lapin se nourri ";
+       return "Le lapin se nourri " . "\n";
     }
 
 }

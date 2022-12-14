@@ -11,31 +11,22 @@ echo "Le chasseur " . $chasseur->getNom() . " a été créer avec un " . $chasse
 
 
 while($lapin->getEnvie()){
-    $lapin->setEnVie(rand());
+    if($lapin->getEnvie()%2==0){
+        $lapin->setEnvie(true);
+        echo $lapin->seNourrir();
+        echo $chasseur->seDeplacer();
+        echo $lapin->crier();
+        echo $chasseur->chasser();
+        echo $lapin->seDeplacer();
+    }
+    else{
+        $lapin->setEnvie(false);
+        echo $lapin->seNourrir();
+        echo $chasseur->seDeplacer();
+        echo $lapin->crier();
+        echo $chasseur->chasser();
+        echo $lapin->seDeplacer();
+    }
 }
-if($lapin->getEnvie()%2==0){
-    $lapin->setEnvie(true);
-    echo $lapin->seNourrir();
-    echo $chasseur->seDeplacer();
-    echo $lapin->crier();
-    echo $chasseur->chasser();
-    echo $lapin->seDeplacer();
-}
-else{
-    $lapin->setEnvie(false);
-    echo $lapin->seNourrir();
-    echo $chasseur->seDeplacer();
-    echo $lapin->crier();
-    echo $chasseur->chasser();
-    echo $lapin->seDeplacer();
-}
 
-
-?>
-
-
-<?php
-$content = ob_get_clean();
-$titre = "Exercice Lapin";
-require "template.php"
 ?>
