@@ -5,7 +5,7 @@ if (isset($_GET['id']) && !empty(trim($_GET['id']))) {
     require_once "config.php";
 
     //prepare ma requete pour recuperer le user en fonction de l'id
-    $sql = "SELECT * FROM user WHERE id = ?";
+    $sql = "SELECT * FROM users WHERE id = ?";
 
     if($stmt = mysqli_prepare($link, $sql)){
         mysqli_stmt_bind_param($stmt, "i", $param_id);
@@ -71,9 +71,14 @@ if (isset($_GET['id']) && !empty(trim($_GET['id']))) {
                         <label for="">Mot de passe</label>
                         <p> <?php echo $row["motdepasse"]; ?> </p>
                     </div>
+                    <div class="form-group">
+                        <label for="">Role</label>
+                        <p> <?php echo $row["role"]; ?> </p>
+                    </div>
                 </div>
             </div>
         </div>
+        <a href="index.php" class="btn btn-secondary ml-2">Retour</a>
     </div>
 
 </body>
