@@ -1,54 +1,51 @@
+
 <?php
 // Include config file
 require_once "config.php";
  
 // Define variables and initialize with empty values
-$name = $address = $salary = "";
-$name_err = $address_err = $salary_err = "";
+$email = $mdp = $roles = "";
+$email_err = $mdp_err = $roles_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    // Validate name
-    $input_name = trim($_POST["name"]);
-    if(empty($input_name)){
-        $name_err = "Please enter a name.";
-    } elseif(!filter_var($input_name, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
-        $name_err = "Please enter a valid name.";
+    // Validate email
+    $input_email = trim($_POST["email"]);
+    if(empty($input_email)){
+        $email_err = "Veuillez entrer un email valide.";
     } else{
-        $name = $input_name;
+        $email = $input_email;
     }
     
-    // Validate address
-    $input_address = trim($_POST["address"]);
-    if(empty($input_address)){
-        $address_err = "Please enter an address.";     
+    // Validate mdp
+    $input_mdp = trim($_POST["mdp"]);
+    if(empty($input_mdp)){
+        $mdp_err = "Veuillez entre un mot de passe correcte.";     
     } else{
-        $address = $input_address;
+        $mdp = $input_mdp;
     }
     
-    // Validate salary
-    $input_salary = trim($_POST["salary"]);
-    if(empty($input_salary)){
-        $salary_err = "Please enter the salary amount.";     
-    } elseif(!ctype_digit($input_salary)){
-        $salary_err = "Please enter a positive integer value.";
+    // Validate roles
+    $input_roles = trim($_POST["roles"]);
+    if(empty($input_roles)){
+        $roles_err = "Entrez un rôle correcte.";     
     } else{
-        $salary = $input_salary;
+        $roles = $input_roles;
     }
     
     // Check input errors before inserting in database
-    if(empty($name_err) && empty($address_err) && empty($salary_err)){
+    if(empty($email_err) && empty($mdp_err) && empty($roles_err)){
         // Prepare an insert statement
-        $sql = "INSERT INTO employees (name, address, salary) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO users (email, motdepasse, role) VALUES (?, ?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sss", $param_name, $param_address, $param_salary);
+            mysqli_stmt_bind_param($stmt, "sss", $param_email, $param_mdp, $param_roles);
             
             // Set parameters
-            $param_name = $name;
-            $param_address = $address;
-            $param_salary = $salary;
+            $param_email = $email;
+            $param_mdp = $mdp;
+            $param_roles = $roles;
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
@@ -56,7 +53,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 header("location: index.php");
                 exit();
             } else{
-                echo "Oops! Something went wrong. Please try again later.";
+                echo "Oops! Quelque chose ne va pas, veuillez réessayer ultérieurement.";
             }
         }
          
