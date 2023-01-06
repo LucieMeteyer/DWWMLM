@@ -1,0 +1,55 @@
+             ______________________________________________
+           |                                                |
+           | 1) Maquettes                                   |
+           |                                                |
+           |  --> Detaillées avec des flèches               |
+           |                                                |
+           | 2) BDD                                         |
+           |  _______                                       |
+           | |       |                                      |
+           | |--> MCD|                                      |
+           | |       | JMerise avec la version et le lien   |
+25 minutes | |--> MLD|                                      |
+           | |_______|                                      |
+           | --> Script de création de la BDD               |
+           | --> Script d'insertion des données             |  
+           |                                                |
+           | 3) Site e-commerce                             |
+           |                                                |
+           | 4) CRUD                                        | 
+           | C Create                                       |
+           | R Read                                         |
+           | U Update                                       |
+           | D Delete                                       |
+           | ______________________________________________ |
+
+
+____________________________________________________________________________________
+
+--- Page de garde ---
+
+--> Logo entreprise
+--> Nom-Prénom
+--> 06/03/2023 au 02/06/2023
+--> AFCI en bas de la page
+
+--- Page 1 : ENTREPRISE ---
+
+--> année de fondation
+--> qu'est ce qu'elle fait
+
+____________________________________________________________________________________
+
+--- 1ere diapo : SOMMAIRE ---
+1) Présentation
+2) Entreprise
+3) Dossier Projet
+4) Conclusion
+
+--- 2eme diapo : PRESENTATION ---
+
+--- 3eme diapo : ENTREPRISE ---
+
+--- 4eme diapo : DOSSIER PROJET ---
+--> Maquettes
+--> BDD/MCD/MLD & SCRIPTS
