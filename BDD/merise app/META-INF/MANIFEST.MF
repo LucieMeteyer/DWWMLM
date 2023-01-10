@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.4
+Created-By: 1.8.0_181-b13 (Oracle Corporation)
+Class-Path: lib/derbyclient.jar lib/hsqldb.jar lib/jaybird-full-2.2.1.
+ jar lib/mysql-connector-java-5.1.12-bin.jar lib/postgresql-9.2-1002.j
+ dbc4.jar lib/sqlite-jdbc-3.7.15.jar
+X-COMMENT: Main-Class will be added automatically by build
+Main-Class: ihm.Splash
+

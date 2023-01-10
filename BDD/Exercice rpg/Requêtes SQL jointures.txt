@@ -1,0 +1,100 @@
+1°) Les jointures internes
+
+SELECT *
+FROM personnage
+INNER JOIN classe ON personnage.idClasse = classe.idClasse;
+
+SELECT nom, levelMin, degat, libelle, estDistance
+FROM arme
+INNER JOIN typeArme ON arme.idTypeArme = typeArme.idTypeArme;
+
+
+2°) Les jointures et surnom de tables
+
+SELECT personnage.nom, classe.nom
+FROM personnage
+INNER JOIN classe ON personnage.idClasse = classe.idClasse;
+
+SELECT p.nom 'nom personnage', c.nom 'nom classe'
+FROM personnage p
+INNER JOIN classe c ON p.idClasse = c.idClasse;
+
+SELECT arme.nom
+FROM arme
+INNER JOIN personnage ON arme.idPersonnage = personnage.idPersonnage;
+
+SELECT p.nom, a.nom, a.levelMin, a.degat, ta.libelle, ta.estDistance
+FROM personnage p
+INNER JOIN arme a ON a.idArme = p.idArmeUtilise
+INNER JOIN typearme ta ON a.idTypeArme = ta.idTypeArme;
+
+
+3°) Jointures et filtre
+
+SELECT personnage.nom, personnage.level, arme.nom, arme.levelMin
+FROM personnage
+INNER JOIN arme ON arme.idArme = personnage.idArmeUtilise
+
+SELECT arme.nom, arme.levelMin, arme.degat, typearme.libelle
+FROM arme
+INNER JOIN typearme ON typearme.idTypeArme = arme.idTypeArme
+WHERE typearme.estDistance = 0
+
+SELECT personnage.nom, arme.nom, typearme.libelle
+FROM personnage
+INNER JOIN dispose ON personnage.idPersonnage = dispose.idPersonnage
+INNER JOIN arme ON dispose.idArme = arme.idArme
+INNER JOIN typearme ON typearme.idTypeArme = arme.idTypeArme
+INNER JOIN classe ON personnage.idClasse = classe.idClasse 
+WHERE classe.idClasse = 1
+
+4°) Jointures, calculs et tris
+
+SELECT personnage.idPersonnage, personnage.nom 'Perso', arme.nom, typearme.libelle
+FROM personnage
+INNER JOIN dispose ON dispose.idPersonnage = personnage.idPersonnage
+INNER JOIN arme ON arme.idArme = dispose.idArme
+INNER JOIN typearme ON typearme.idTypeArme = arme.idTypeArme
+WHERE personnage.level = 10
+
+SELECT personnage.idPersonnage, personnage.nom 'Perso', arme.nom, typearme.libelle
+FROM personnage
+INNER JOIN dispose ON dispose.idPersonnage = personnage.idPersonnage
+INNER JOIN arme ON arme.idArme = dispose.idArme
+INNER JOIN typearme ON typearme.idTypeArme = arme.idTypeArme
+WHERE personnage.level = 10
+ORDER BY personnage.idPersonnage ASC
+
+SELECT AVG(arme.degat) AS 'Moyenne des dégats des armes à distance'
+FROM arme
+INNER JOIN typearme ON typearme.idTypeArme = arme.idTypeArme
+WHERE typearme.estDistance = 1
+
+SELECT * 
+FROM personnage
+INNER JOIN dispose ON dispose.idPersonnage = personnage.idPersonnage
+INNER JOIN arme ON arme.idArme = dispose.idArme
+INNER JOIN typearme ON typearme.idTypeArme = arme.idTypeArme
+WHERE typearme.libelle
+LIKE 'a%'
+
+5)° Les jointures externes
+
+SELECT *
+FROM typearme
+LEFT JOIN arme ON typearme.idTypeArme = arme.idTypeArme
+
+SELECT *
+FROM arme
+RIGHT JOIN typearme ON typearme.idTypeArme = arme.idTypeArme
+
+SELECT arme.nom, personnage.nom, arme.levelMin
+FROM arme
+LEFT JOIN personnage ON personnage.idArmeUtilise = arme.idArme
+ORDER BY arme.levelMin ASC
+
+SELECT arme.nom, personnage.nom
+FROM personnage
+INNER JOIN dispose ON personnage.idPersonnage = dispose.idPersonnage
+RIGHT JOIN arme ON dispose.idArme = arme.idArme
+ORDER BY arme.nom ASC
