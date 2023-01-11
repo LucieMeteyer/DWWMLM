@@ -1,0 +1,26 @@
+MVC va permettre de separer les parties du site
+
+3 parties :
+
+modele -> partie des données
+vue-> partie affichage (html)
+contrôleur->partie "pilotage"
+
+->meilleure sécurisation du code, une maintenabilité plus aisée et assurera la cohérence globale du site
+
+CREATION DE LA STRUCTURE DES DOSSIERS
+
+3 dossiers qui vont être scindés
+
+controllers : pour le pilotage/assemblage des pages
+
+models : pour la récup et la manip des données (classe/accès à la BDD)
+
+Viewq : pour les parties de code permettant de faire l'affichage (template,affichage spécifique)
+
+le fichier index va être le routeur
+
+modif du fichier index
+va devenir "accueil.view.php"
+
+
