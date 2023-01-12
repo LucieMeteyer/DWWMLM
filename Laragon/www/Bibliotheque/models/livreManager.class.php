@@ -15,7 +15,7 @@ Class LivreManager extends Model {
 
 //getter
 public function getLivres(){
-     return $this->livres;
+     return $this->livres; //tableau de livre
     }
 
     public function chargementLivres(){
@@ -30,7 +30,14 @@ public function getLivres(){
         }
     }
 
+public function getLivreById($id){
+    for($i=0; $i < count($this->livres); $i++){
+        if($this->livres[$i]->getId() === $id){
+            return $this->livres[$i];
+        }
+    }
 
+}
 
 }
 
