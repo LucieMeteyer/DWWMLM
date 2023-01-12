@@ -1,10 +1,4 @@
 <?php 
-
-require_once "LivreManager.class.php";
-
-$livreManager = new LivreManager;
-$livreManager->chargementLivres();
-
 ob_start() 
 ?>
 
@@ -15,9 +9,9 @@ ob_start()
         <th> Nombre de pages </th>
         <th colspan="2"> Actions </th>
     </tr>
+
     <?php 
-    $livres=$livreManager->getLivres();
-    for($i=0; $i<count($livreManager->getLivres()); $i++) : ?>
+    for($i=0; $i<count($livres); $i++) : ?>
     <tr>
         <td class="align-middle"> <img src="public/images/<?= $livres[$i]->getImage(); ?>" width="60px;" alt=""> </td>
         <td class="align-middle"> <?= $livres[$i]->getTitre();?></td>
@@ -33,11 +27,4 @@ ob_start()
 $content = ob_get_clean();
 $titre = "Les livres de la bibliothèque";
 require "template.php";
-
-
-
-
-
-
-
 ?>

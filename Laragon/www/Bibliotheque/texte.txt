@@ -23,4 +23,4 @@ le fichier index va être le routeur
 modif du fichier index
 va devenir "accueil.view.php"
 
-
+--> on met pas 2 points sur le chemin car tout part de index, il va remonter remonter dans le vide et ça va pas marcher

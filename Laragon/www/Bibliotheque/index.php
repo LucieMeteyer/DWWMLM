@@ -1,10 +1,14 @@
 <?php
 
+require_once "controllers/livres.controller.php";
+$livreController = new LivresController;
 if(empty($_GET['page'])){
-    require "views/accueil.views.php";
+    require "views/accueil.view.php";
 } else {
     switch($_GET['page']){
-        case "accueil" : require "views/accueil.views.php";
+        case "accueil" : require "views/accueil.view.php";
+        break;
+        case "livres" : $livreController->afficherLivres();
         break;
     }
 }
