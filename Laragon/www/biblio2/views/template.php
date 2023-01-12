@@ -19,10 +19,10 @@
             <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.php"> Accueil </a>
+                        <a class="nav-link active" href="<?= URL ?>accueil"> Accueil </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="personnages.php">Personnages</a>
+                        <a class="nav-link" href="<?= URL ?>personnages">Personnages</a>
                     </li>
                 </ul>
             </div>

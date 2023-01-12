@@ -15,7 +15,7 @@ Class PersonnagesManager extends Model {
 
 //getter
 public function getPersonnages(){
-     return $this->personnages;
+     return $this->personnages; //tableau de personnages
     }
 
     public function chargementPersonnages(){
@@ -30,10 +30,17 @@ public function getPersonnages(){
         }
     }
 
+    public function getPersonnageById($id){
+        for($i=0; $i < count($this->personnages); $i++){
+            if($this->personnages[$i]->getId() === $id){
+                return $this->personnages[$i];
+            }
+        }
+
 
 
 }
-
+}
 
 
 ?>
