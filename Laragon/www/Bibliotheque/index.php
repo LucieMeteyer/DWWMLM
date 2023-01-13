@@ -26,7 +26,9 @@ try {
                 } else if ($url[1] === "m") {
                     echo "modifier un livre";
                 } else if ($url[1] === "s") {
-                    echo "suppression d'un livre";
+                    $livreController->suppressionLivre((int)$url[2]);
+                } else if ($url[1] === "av") {
+                    $livreController->ajoutLivreValidation();
                 } else{
                     throw new Exception("La page n'existe pas");
                 }
