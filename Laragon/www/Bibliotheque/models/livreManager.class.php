@@ -54,7 +54,7 @@ class LivreManager extends Model
         $stmt->closeCursor();
 
         if ($resultat > 0) {
-            $livre = new Livre($this->getBdd()->lastInsertIsId(), $titre, $nbPages, $image);
+            $livre = new Livre($this->getBdd()->lastInsertId(), $titre, $nbPages, $image);
             $this->ajoutLivre($livre);
         }
     }
@@ -71,5 +71,27 @@ class LivreManager extends Model
             $livre = $this->getLivreById($id);
             unset($livre);
         }
+    }
+
+    public function modificationLivreBd($id, $titre, $nbPages, $image){
+        $req="
+        update livres 
+        set titre=:titre, nbPages=:nbPages, image=:image
+        where id=:id
+        ";
+        $stmt = $this->getBdd()->prepare($req);
+        $stmt->bindValue(":id", $id, PDO::PARAM_INT); //liaison de id de la bdd a la var $id
+        $stmt->bindValue(":titre", $titre, PDO::PARAM_STR); //liaison de titre de la bdd a la var $titre
+        $stmt->bindValue(":nbPages", $nbPages, PDO::PARAM_INT); //liaison de nbPages de la bdd a la var $nbPages
+        $stmt->bindValue(":image", $image, PDO::PARAM_STR); //liaison de image de la bdd a la var $image
+        $resultat = $stmt->execute();
+        $stmt->closeCursor();
+
+        if($resultat > 0 ){
+            $this->getLivreById($id)->setTitre($titre);
+            $this->getLivreById($id)->setNbPages($nbPages);
+            $this->getLivreById($id)->setImage($image);
+        }
+
     }
 }

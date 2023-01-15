@@ -19,24 +19,27 @@ try {
             case "livres":
                 if (empty($url[1])) {
                     $livreController->afficherLivres();
-                } else if ($url[1] === "l") {
+                } elseif ($url[1] === "l") {
                     $livreController->afficherLivre((int)$url[2]);
-                } else if ($url[1] === "a") {
+                } elseif ($url[1] === "a") {
                     $livreController->ajoutLivre();
-                } else if ($url[1] === "m") {
-                    echo "modifier un livre";
-                } else if ($url[1] === "s") {
+                } elseif ($url[1] === "m") {
+                    $livreController->modificationLivre((int)$url[2]);
+                } elseif ($url[1] === "s") {
                     $livreController->suppressionLivre((int)$url[2]);
-                } else if ($url[1] === "av") {
+                } elseif ($url[1] === "av") {
                     $livreController->ajoutLivreValidation();
-                } else{
+                } elseif ($url[1] === "mv"){
+                    $livreController->modificationLivreValidation();
+                }
+                else {
                     throw new Exception("La page n'existe pas");
                 }
                 break;
-                default : throw new Exception("La page n'existe pas");
+            default:
+                throw new Exception("La page n'existe pas");
         }
     }
-} 
-catch (Exception $e) {
+} catch (Exception $e) {
     echo $e->getMessage();
 }
