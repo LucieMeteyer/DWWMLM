@@ -11,39 +11,49 @@
   <title>Cusine</title>
 </head>
 
-<body>
-  <div style="font-family: 'Eagle Lake', cursive; color : #2F2523; background-color: #F9D194; min-height:100vh;">
-    <nav class="navbar navbar-expand-lg fs-5" style="background-color: #97603E;">
-      <div class="container-fluid ">
-        <img style="width : 80px; " src="public/images/logo.png" alt="logo">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav me-auto p-3">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Accueil
-                <span class="visually-hidden">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Recettes</a>
-            </li>
-          </ul>
-          <button type="submit" style="background-color: #B79994; font-family: 'Eagle Lake',cursive;" class="btn my-2 my-sm-0 fs-5">connexion</button>
 
+
+<body style="box-sizing: border-box; background-color: #F9D194;">
+  <header>
+    <div style="font-family: 'Eagle Lake', cursive; color : #2F2523;  min-height:100vh;">
+      <nav class="navbar navbar-expand-lg fs-5" style="background-color: #97603E;">
+        <div class="container-fluid ">
+          <img style="width : 80px; " src="public/images/logo.png" alt="logo">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto p-3">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Accueil
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Recettes</a>
+              </li>
+            </ul>
+            <button type="submit" style="background-color: #B79994; font-family: 'Eagle Lake',cursive;" class="btn my-2 my-sm-0 fs-5">connexion</button>
+
+          </div>
         </div>
+      </nav>
+
+
+      <div class="container-fluid  d-flex  flex-column p-0 ">
+        <img class="img-fluid" style="width:100vw; " src="public/images/calcifer.png" alt="calcifer">
+        <h1 class="text-center m-5 p-2 "><?= $titre ?></h1>
+        <?= $content ?>
       </div>
-    </nav>
+  </header>
 
 
-    <div class="container-fluid  d-flex  flex-column p-0">
-
-      <img style="width:100vw;" src="public/images/calcifer.png" alt="calcifer">
-      <h1 class="text-center m-2 p-2"><?= $titre ?></h1>
-      <?= $content ?>
-
+  <footer class="mt-5">
+    <div class="d-flex align-items-center justify-content-between" style="background-color: #97603E;">
+      <a style=" font-family: 'Eagle Lake', cursive;" class="text-light" href="#"> <img src="public/images/shop.png" alt="shop"> LesUstensilesDeCalcifer </a>
+      <img src="public/images/logo footer.png" alt="logo">
     </div>
+  </footer>
 
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
