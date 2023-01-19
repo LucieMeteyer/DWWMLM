@@ -1,19 +1,48 @@
-<?php ob_start() ?>
-
-<div style= " background-color : #FEE9B1; border-radius: 35px ;" class="container fs-5 p-3 ">
-    <center>
-        <p style = "font-family : 'Eagle Lake', cursive;"> Bienvenue dans La cuisine de Calcifer ! <br>
-            La nourriture dans les ghiblis vous ont toujours fait baver ? <br>
-            Nous aussi ! <br>
-            C’est pour ça qu’on a demandé à Calcifer qui nous a gentiment <br>
-            référencé les recettes des plats qui nous font tant envie ! <br>
-            (il est gentil hein ?)
-        </p>
-    </center>
-
-</div>
-
 <?php
-$content = ob_get_clean();
-$titre = "Cuisine de Calcifer";
-require "template.php";
+
+define("URL", str_replace("index.php", "", (isset($_SERVER['HTTPS']) ? "https" : "http") .
+    "://$_SERVER[HTTP_HOST]$_SERVER[PHP_SELF]"));
+
+
+require_once "controllers/recettes.controller.php";
+$recetteController = new RecettesController;
+try {
+    if (empty($_GET['page'])) {
+        require "views/accueil.view.php";
+    } else {
+        $url = explode("/", filter_var($_GET['page']), FILTER_SANITIZE_URL);
+
+        switch ($url[0]) {
+            case "accueil":
+                require "views/accueil.view.php";
+                break;
+            case "recettes":
+                if (empty($url[1])) {
+                    $recetteController->afficherRecettes();
+                } elseif ($url[1] === "r") {
+                    $recetteController->afficherRecette((int)$url[2]);
+                } elseif ($url[1] === "a") {
+                    $recetteController->ajoutRecette();
+                } elseif ($url[1] === "m") {
+                    $recetteController->modificationRecette((int)$url[2]);
+                } elseif ($url[1] === "s") {
+                    $recetteController->suppressionRecette((int)$url[2]);
+                } elseif ($url[1] === "av") {
+                    $recetteController->ajoutRecetteValidation();
+                } elseif ($url[1] === "mv") {
+                    $recetteController->modificationRecetteValidation();
+                } else {
+                    throw new Exception("La page n'existe pas");
+                }
+                break;
+            default:
+                throw new Exception("La page n'existe pas");
+        }
+    }
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
+?>
+
+
+

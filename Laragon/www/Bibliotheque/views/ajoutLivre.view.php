@@ -22,6 +22,6 @@
 
 <?php
 $content = ob_get_clean();
-$titre = "Ajout d'un livre";
+$titre = "Ajout d'une recette";
 require "template.php";
 ?>
