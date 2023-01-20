@@ -45,5 +45,4 @@ ob_start()
 
 <?php
 $content = ob_get_clean();
-$titre = "Les recettes de Calcifer";
 require "template.php";
