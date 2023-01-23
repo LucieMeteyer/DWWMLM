@@ -98,3 +98,66 @@ FROM personnage
 INNER JOIN dispose ON personnage.idPersonnage = dispose.idPersonnage
 RIGHT JOIN arme ON dispose.idArme = arme.idArme
 ORDER BY arme.nom ASC
+
+
+1°) Regroupement et GROUPE BY
+
+SELECT libelle AS "Type d'arme", COUNT(arme.idTypeArme) AS "Nb d'arme"
+FROM arme 
+INNER JOIN typearme ON typearme.idTypeArme = arme.idTypeArme
+GROUP BY arme.idTypeArme
+
+SELECT classe.nom AS "Classe", description, COUNT(personnage.idClasse) AS "NB Personnage"
+FROM personnage
+INNER JOIN classe ON personnage.idClasse = classe.idClasse
+GROUP BY classe.idClasse
+
+SELECT personnage.nom AS "nom", COUNT(*)
+FROM dispose
+INNER JOIN personnage ON dispose.idPersonnage = personnage.idPersonnage
+INNER JOIN arme ON arme.idArme = dispose.idArme
+GROUP BY personnage.nom
+
+SELECT classe.nom AS "classe", personnage.nom, COUNT(*)
+FROM dispose
+INNER JOIN personnage ON dispose.idPersonnage = personnage.idPersonnage
+INNER JOIN arme ON arme.idArme = dispose.idArme
+INNER JOIN classe ON classe.idClasse = personnage.idClasse
+WHERE classe.idClasse = 1
+GROUP BY personnage.nom
+
+SELECT arme.nom AS "nom", COUNT(personnage.idPersonnage)
+FROM dispose
+INNER JOIN arme ON arme.idArme = dispose.idArme
+INNER JOIN personnage ON dispose.idPersonnage = personnage.idPersonnage
+GROUP BY arme.nom
+
+SELECT classe.nom AS "Classe", AVG(personnage.level) AS "Niveau Moyen"
+FROM personnage
+INNER JOIN classe ON classe.idClasse = personnage.idClasse
+GROUP BY classe.nom
+
+
+2°) Regroupement et HAVING « Having » permet de filtrer sur les fonctions de calcul (AVG /
+COUNT/SUM/MIN/MAX)
+
+SELECT classe.nom AS "Classe", AVG(personnage.level) AS "Niveau Moyen"
+FROM personnage
+INNER JOIN classe ON classe.idClasse = personnage.idClasse
+GROUP BY classe.nom
+HAVING AVG(personnage.level) >=9
+
+SELECT arme.nom AS "nom", COUNT(personnage.idPersonnage)
+FROM dispose
+INNER JOIN arme ON arme.idArme = dispose.idArme
+INNER JOIN personnage ON dispose.idPersonnage = personnage.idPersonnage
+GROUP BY arme.nom
+HAVING COUNT(personnage.idPersonnage) BETWEEN 1 AND 2
+
+SELECT typearme.libelle AS "Type", COUNT(arme.idTypeArme) AS "NB Arme"
+FROM typearme
+INNER JOIN arme ON arme.idTypeArme = typearme.idTypeArme
+WHERE typearme.estDistance = 0
+GROUP BY typearme.libelle
+HAVING COUNT(arme.idTypeArme)
+
