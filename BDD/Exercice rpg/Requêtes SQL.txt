@@ -49,12 +49,22 @@ SELECT ROUND(AVG(degat),2) FROM arme WHERE levelMin BETWEEN 3 AND 7;
 6°) LIKE / IN LIMIT / OFFSET / IS NULL
 
 SELECT * FROM personnage WHERE nom LIKE 'l%';
+
 SELECT * FROM personnage WHERE nom LIKE 'l%er';
+
 SELECT * FROM arme WHERE nom LIKE '%bois%';
+
 SELECT * FROM arme WHERE nom LIKE 'a_b%';
+
 SELECT * FROM arme WHERE idArme IN(1,2,4,5,7);
-SELECT * FROM personnage WHERE idPersonnage <> 5 LIMIT 4 OFFSET 1 AND level = 10;
+
+SELECT * FROM personnage WHERE idPersonnage <> 5 
+LIMIT 4 OFFSET 1 AND level = 10;
+
 SELECT * FROM personnage WHERE surnom IS NOT NULL;
+
 SELECT * FROM personnage WHERE surnom IS NULL;
+
 SELECT * FROM personnage LIMIT 3;
+
 SELECT * FROM personnage LIMIT 2 OFFSET 3;
