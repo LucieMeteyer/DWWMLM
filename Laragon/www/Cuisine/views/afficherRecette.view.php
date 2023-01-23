@@ -10,24 +10,31 @@ ob_start()
 <div class="d-flex flex-column align-items-center m-5">
 
     <div class="col-6 text-center" style="background-color: #FEE9B1; border-radius: 35px;">
-        <p><?= $recette->getNom() ?></p>
+        <p style="font-family :'Eagle Lake', cursive;"><?= $recette->getNom() ?></p>
     </div>
     <div class="col-6 text-center" style="background-color: #FEE9B1; border-radius: 35px;">
         <img src="<?= URL ?>public/images/<?= $recette->getImage() ?>">
     </div>
-
     <div class="col-6 text-center" style="background-color: #FEE9B1; border-radius: 35px;">
-        <p>Ingredients : <?= $recette->getIngredients() ?></p>
+        <p style="font-family :'Eagle Lake', cursive;">Ingrédients :</p>
+        <?php foreach ($recette->getIngredients() as $ingredients) : ?>
+
+            <p style="font-family :'Eagle Lake', cursive;"> <?= $ingredients ?></p>
+
+        <?php endforeach ?>
     </div>
     <div class="col-6 text-center" style="background-color: #FEE9B1; border-radius: 35px;">
-        <p>Etapes : <?= $recette->getEtapes() ?></p>
+        <p style="font-family :'Eagle Lake', cursive;">Etapes :</p>
+        <?php foreach ($recette->getEtapes() as $etapes) : ?>
+            <div class="col-6 text-center" style="background-color: #FEE9B1; border-radius: 35px;">
+                <p style="font-family :'Eagle Lake', cursive;"><?= $etapes ?></p>
+            </div>
+        <?php endforeach ?>
     </div>
 
-</div>
 
 
-
-<?php
-$content = ob_get_clean();
-require "template.php";
-?>
+    <?php
+    $content = ob_get_clean();
+    require "template.php";
+    ?>
