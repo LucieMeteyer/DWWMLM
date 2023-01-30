@@ -10,12 +10,12 @@ ob_start()
 <div class=" d-flex flex-column align-items-center m-5">
 
     <div class=" d-flex row m-3 text-center" style="background-color: #FEE9B1; border-radius: 35px;">
-        <p style="font-family :'Eagle Lake', cursive;"><?= $recette->getNom() ?></p>
+        <p style="font-family :'Eagle Lake', cursive; font-size:20px;"><?= $recette->getNom() ?></p>
     </div>
     <div class="  d-flex row m-3 text-center" style="background-color: #FEE9B1; border-radius: 35px;">
         <img src="<?= URL ?>public/images/<?= $recette->getImage() ?>">
     </div>
-    <div class=" d-flex row m-3 text-center" style="background-color: #FEE9B1; border-radius: 35px;">
+    <div class=" col-6 d-flex row m-3 text-center" style="background-color: #FEE9B1; border-radius: 35px;">
         <p style="font-family :'Eagle Lake', cursive;">Ingrédients :</p>
         <?php foreach ($recette->getIngredients() as $ingredients) : ?>
 
