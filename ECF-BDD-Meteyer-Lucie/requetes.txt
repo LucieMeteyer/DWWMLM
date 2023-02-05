@@ -1,0 +1,42 @@
+1)
+SELECT nomEtudiant, prenomEtudiant, dateNaissanceEtudiant
+FROM etudiants
+WHERE dateNaissanceEtudiant < (
+	SELECT dateNaissanceEtudiant
+	FROM etudiants
+	WHERE nomEtudiant = "Leclercq" AND prenomEtudiant = "Jules") 
+
+2)
+SELECT CONCAT(etudiants.nomEtudiant, ' ', etudiants.prenomEtudiant) AS "nom", avoir_note.note
+FROM avoir_note
+INNER JOIN etudiants ON etudiants.idEtudiant = avoir_note.idEtudiant
+WHERE avoir_note.note > 10 AND idEpreuve = 4
+
+3)
+SELECT etudiants.nomEtudiant, etudiants.prenomEtudiant, avoir_note.note
+FROM avoir_note
+INNER JOIN etudiants ON etudiants.idEtudiant = avoir_note.idEtudiant
+WHERE avoir_note.note >= 12
+
+4)
+SELECT etudiants.nomEtudiant, etudiants.prenomEtudiant, avoir_note.note
+FROM avoir_note
+INNER JOIN etudiants ON etudiants.idEtudiant = avoir_note.idEtudiant
+WHERE idEpreuve = 4 AND avoir_note.note > (
+SELECT avoir_note.note
+FROM avoir_note
+INNER JOIN etudiants ON etudiants.idEtudiant = avoir_note.idEtudiant
+WHERE nomEtudiant = "Dupont" AND prenomEtudiant = "Luc" AND idEpreuve =4)
+
+5)
+
+6)
+ALTER TABLE etudiants ADD HOBBY VARCHAR(20) DEFAULT "Sport"
+
+7)
+ALTER TABLE etudiants ADD NEWCOL INTEGER
+ALTER TABLE etudiants DROP NEWCOL
+
+8)
+
+9)
