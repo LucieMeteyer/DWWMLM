@@ -22,6 +22,7 @@ const a_text = document.querySelector("#a_text");
 const b_text = document.querySelector("#b_text");
 const c_text = document.querySelector("#c_text");
 const submitBtn = document.querySelector("#submit");
+const img = document.querySelector("#anya");
 
 let currentQuizz = 0;
 let score = 0;
@@ -52,6 +53,7 @@ function getSelected() {
     })
     return answer;
 }
+
 
 submitBtn.addEventListener('click', function () {
     const answer = getSelected();
