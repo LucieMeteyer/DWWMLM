@@ -12,36 +12,37 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="d-flex flex-column">
+            <h1 class="mb-5 text-center pt-3"> Quizz Spy X Family </h1>
+            <div style="border-radius: 6px; background-color : #f4ccc5;" id="quizz">
+                <div class="quizz-header p-4 ">
+                    <h2 id="question">Question Text</h2>
+                    <ul>
+                        <li>
+                            <input type="radio" name="answer" id="a" class="answer">
+                            <label for="a" id="a_text">Answer</label>
+                        </li>
 
-    <main>
-        <h1> Quizz Spy X Family </h1>
-        <div style="border-radius: 6px; background-color : #f4ccc5;" id="quizz">
-            <div class="quizz-header">
-                <h2 id="question">Question Text</h2>
-                <ul>
-                    <li>
-                        <input type="radio" name="answer" id="a" class="answer">
-                        <label for="a" id="a_text">Answer</label>
-                    </li>
+                        <li>
+                            <input type="radio" name="answer" id="b" class="answer">
+                            <label for="b" id="b_text">Answer</label>
+                        </li>
 
-                    <li>
-                        <input type="radio" name="answer" id="b" class="answer">
-                        <label for="b" id="b_text">Answer</label>
-                    </li>
+                        <li>
+                            <input type="radio" name="answer" id="c" class="answer">
+                            <label for="c" id="c_text">Answer</label>
+                        </li>
 
-                    <li>
-                        <input type="radio" name="answer" id="c" class="answer">
-                        <label for="c" id="c_text">Answer</label>
-                    </li>
-
-                </ul>
+                    </ul>
+                </div>
+                <button class="btn btn-light" id="submit">Submit</button>
             </div>
-            <button class="btn btn-light" id="submit">Submit</button>
-        </div>
 
-    </main>
+        </div>
+    </div>
     <footer class="position-absolute bottom-0">
-        <div><img src="images/anya.png" class="img-fluid " alt="anya">
+        <div class=""><img src="images/anya.png" id="anya" alt="anya">
         </div>
     </footer>
 

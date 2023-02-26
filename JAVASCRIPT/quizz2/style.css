@@ -3,18 +3,11 @@
 }
 body{
     background-color: #E4998B;
-    display: flex;
-    align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
 }
 
-
-
-.quizz-header{
-    padding: 4rem;
-}
 
 h2{
 padding: 1rem;
@@ -37,7 +30,7 @@ ul li label{
 }
 
 button{
-    background-color: #03cae4;
+    background-color: #e3bad7;
     color: #fff;
     border: none;
     display: block;
@@ -49,10 +42,5 @@ button{
 }
 
 button:hover{
-    background-color: #04adc4 ;
-}
-
-button:focus{
-    outline: none;
-    background-color: #44b927;
+    background-color: #e876c6 ;
 }
